@@ -19,7 +19,7 @@ body {
     font-size: 40px;
     position: relative;
     top: 700px;
-    right: 144px;
+    right: -50px;
 }
 
 img {
@@ -31,4 +31,9 @@ img {
 
 #en {
     margin-bottom:80px;
+}
+
+#enM {
+    position: relative;
+    bottom: 85px;
 }
