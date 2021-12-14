@@ -26,6 +26,7 @@ img {
     margin-right: 1000px;
     float: left;
     position: relative;
+    max-width: 1080px;
 }
 #en {
     margin-bottom:80px;
