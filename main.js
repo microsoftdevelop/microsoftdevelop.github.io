@@ -1,22 +1,28 @@
-let date = new Date();
-const d = new Date();
-let day = d.getDate();
-let texto = document.getElementById('text1');
-var check = date.getMonth();
-if (check<9) {
-texto.innerHTML = (' (' + day + '.' + '0' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
+var date = new Date();
+let text = document.getElementById('text1');
+var checkMonth = date.getMonth();
+var checkDay = date.getDate()
+
+if (checkMonth<9 && checkDay<10) {
+text.innerHTML = (' (' + '0' + date.getDate() + '.' + '0' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
+} else if (checkMonth<9){
+text.innerHTML = (' (' + date.getDate() + '.' + '0' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
+} else if (checkDay<10){
+text.innerHTML = (' (' + '0' + date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
 } else {
-texto.innerHTML = (' (' + day + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
+text.innerHTML = (' (' + date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
 }
 
 
-let date1 = new Date();
-const d1 = new Date();
-let day1 = d1.getDate();
-let texto1 = document.getElementById('text2');
 
-if (check<9) {
-texto1.innerHTML = (' (' + day1 + '.' + '0' + (date.getMonth() + 1) + '.' + date1.getFullYear() + ')');
+let textEN = document.getElementById('text2');
+
+if (checkMonth<9 && checkDay<10) {
+textEN.innerHTML = (' (' + '0' + date.getDate() + '.' + '0' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
+} else if (checkMonth<9){
+textEN.innerHTML = (' (' + date.getDate() + '.' + '0' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
+} else if (checkDay<10){
+textEN.innerHTML = (' (' + '0' + date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
 } else {
-texto1.innerHTML = (' (' + day1 + '.' + (date.getMonth() + 1) + '.' + date1.getFullYear() + ')');
+textEN.innerHTML = (' (' + date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
 }
