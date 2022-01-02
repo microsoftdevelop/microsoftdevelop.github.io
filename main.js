@@ -2,8 +2,11 @@ let date = new Date();
 const d = new Date();
 let day = d.getDate();
 let texto = document.getElementById('text1');
-var check = date.getMonth();
-if (check<9) {
+var checkMonth = date.getMonth();
+var checkDay = d.getDate();
+if (checkDay<10) {
+day = ('0' + day);
+if (checkMonth<9) {
 texto.innerHTML = (' (' + day + '.' + '0' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
 } else {
 texto.innerHTML = (' (' + day + '.' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
@@ -15,7 +18,7 @@ const d1 = new Date();
 let day1 = d1.getDate();
 let texto1 = document.getElementById('text2');
 
-if (check<9) {
+if (checkMonth<9) {
 texto1.innerHTML = (' (' + day1 + '.' + '0' + (date.getMonth() + 1) + '.' + date1.getFullYear() + ')');
 } else {
 texto1.innerHTML = (' (' + day1 + '.' + (date.getMonth() + 1) + '.' + date1.getFullYear() + ')');
