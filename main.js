@@ -3,9 +3,7 @@ const d = new Date();
 let day = d.getDate();
 let texto = document.getElementById('text1');
 var checkMonth = date.getMonth();
-var checkDay = d.getDate();
-if (checkDay<10) {
-day = ('0' + day);
+
 if (checkMonth<9) {
 texto.innerHTML = (' (' + day + '.' + '0' + (date.getMonth() + 1) + '.' + date.getFullYear() + ')');
 } else {
